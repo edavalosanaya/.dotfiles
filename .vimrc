@@ -1,5 +1,5 @@
 syntax on
-set numver
+set number
 set noswapfile
 set hlsearch
 set ignorecase
