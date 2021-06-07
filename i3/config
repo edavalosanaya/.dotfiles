@@ -105,7 +105,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -127,9 +127,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 
-# resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -137,10 +137,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -153,6 +153,23 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+
+# Multi-monitor support
+bindsym $mod+m mode "monitor-move"
+
+mode "monitor-move" {
+	# These bindings trigger as soon as you enter the multi-monitor support mode
+	bindsym h move workspace to output left
+	bindsym l move workspace to output right
+
+        bindsym Escape mode "default"
+	bindsym $mod+m mode "default"
+}
+
+# Move the current workspace to the monitor on the right
+#bindsym $mod+Ctrl+Escape+l move workspace to output right
+# Move the current workspace to the monitor on the left
+#bindsym $mod+Ctrl+Escape+h move workspace to output left
 
 #################################################################################
 # Visual Modifications
@@ -174,7 +191,7 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # Adding the locking functionality by using i3lock
-bindsym $mod+Ctrl+Shift+l exec i3lock --color=$bg-color
+bindsym $mod+Ctrl+Shift+l exec i3lock --color=#000000
 
 # Changing the wallpaper of the desktop
 exec_always --no-startup-id xsetroot -solid black
@@ -224,7 +241,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assigning types of applications to workspaces
 ### Terminals
-assign [class="Gnome-terminal"] $wsTerminal
+#assign [class="Gnome-terminal"] $wsTerminal
 ### Editors
 assign [class="Code"] $wsEditor
 ### Browsers
@@ -236,6 +253,7 @@ for_window [class="Spotify"] move to workspace $wsMusic
 assign [class="Thunderbird"] $wsMessage
 assign [class="Prospect Mail"] $wsMessage
 assign [class="discord"] $wsMessage
+
 #################################################################################
 # Bar Modifications
 #################################################################################
