@@ -12,8 +12,14 @@ ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc # file
 # fonts configuration 
 ln -sf $HOME/.dotfiles/.fonts $HOME/ # directory
 
-# gtk-2 configuation
+# gtk-2 configuration
 ln -sf $HOME/.dotfiles/.gtkrc-2.0 $HOME/.gtkrc-2.0
 
 # gtk-3 configuration
 ln -sf $HOME/.dotfiles/settings.ini $HOME/.config/gtk-3.0/settings.ini
+
+# invert script configuration
+if [ ! -f /usr/bin/invert-color ]; # if the link does not exist, create it
+	then
+		sudo ln -s $HOME/.dotfiles/invert.sh /usr/bin/invert-color
+fi

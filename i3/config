@@ -59,6 +59,9 @@ bindsym XF86AudioPrev exec playerctl previous
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start a files manager
+bindsym $mod+Shift+Return exec nautilus
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -158,10 +161,17 @@ mode "resize" {
 bindsym $mod+m mode "monitor-move"
 
 mode "monitor-move" {
+	
 	# These bindings trigger as soon as you enter the multi-monitor support mode
-	bindsym h move workspace to output left
-	bindsym l move workspace to output right
+	# For moving workspaces
+	bindsym Ctrl+h move workspace to output left
+	bindsym Ctrl+l move workspace to output right
 
+	# For moving containers
+	bindsym h move container to output left
+	bindsym l move container to output right
+
+	# For returning back to default mode (very important!)
         bindsym Escape mode "default"
 	bindsym $mod+m mode "default"
 }
@@ -203,12 +213,16 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
+# Inverting the colors of Mendeley since it cannot be changed any other way
+bindsym $mod+i exec invert-color 
+
 #################################################################################
 # Workspace Configuration
 #################################################################################
 
 # Define names for default s for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+set $wsDashboard "0: Dashboard"
 set $wsTerminal "1: Terminals "
 set $wsEditor "2: Editors "
 set $wsBrowser "3: Browsers "
@@ -225,7 +239,7 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+0 workspace $wsDashboard
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $wsTerminal
@@ -237,22 +251,45 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+0 move container to workspace $wsDashboard
 
 # Assigning types of applications to workspaces
+
 ### Terminals
 #assign [class="Gnome-terminal"] $wsTerminal
+
 ### Editors
 assign [class="Code"] $wsEditor
+
 ### Browsers
 assign [class="Vivaldi-stable"] $wsBrowser
+assign [class="Firefox"] $wsBrowser
+
 ### Music
 #assign [class="Spotify"] $wsMusic
 for_window [class="Spotify"] move to workspace $wsMusic
+
 ### Message
 assign [class="Thunderbird"] $wsMessage
 assign [class="Prospect Mail"] $wsMessage
 assign [class="discord"] $wsMessage
+
+#################################################################################
+# Dashboard
+#################################################################################
+
+# Todoist initialization
+#exec --no-startup-id todoist
+#for_window [class="Todoist"] move to workspace $wsDashboard
+
+# Habitica initialization
+exec --no-startup-id habitica-desktop
+for_window [class="Habitica"] move to workspace $nwsDashboard
+exec compton --invert-color-include "class_g=Habitica"
+
+# Superproductivity
+exec --no-startup-id superproductivity
+for_window [class="superProductivity"] move to workspace $wsDashboard
 
 #################################################################################
 # Bar Modifications
