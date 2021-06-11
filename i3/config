@@ -283,8 +283,8 @@ assign [class="discord"] $wsMessage
 #for_window [class="Todoist"] move to workspace $wsDashboard
 
 # Habitica initialization
-exec --no-startup-id habitica-desktop
-for_window [class="Habitica"] move to workspace $nwsDashboard
+exec --no-startup-id desktop-habitica
+for_window [class="Habitica"] move to workspace $wsDashboard
 exec compton --invert-color-include "class_g=Habitica"
 
 # Superproductivity
@@ -307,5 +307,6 @@ bar {
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
+	#tray_output primary
 }
 
