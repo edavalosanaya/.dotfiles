@@ -17,7 +17,14 @@ set incsearch
 " Code additions to use vim-plug
 call plug#begin('~/.vim/plugged')
 
+" Install NERDTree
 Plug 'preservim/NERDTree'
+
+" Install NERDTree Additions
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdtree-project-plugin'
+Plug 'PhilRunninger/nerdtree-buffer-ops'
 
 " Initialize plugin system
 call plug#end()
