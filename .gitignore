@@ -1,0 +1,4 @@
+# Ignoring all possible plug-ins to make this repository small.
+# This plug-ins can be install with the ```:PlugInstall``` command.
+
+.vim/plugged/*

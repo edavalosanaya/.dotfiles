@@ -1,0 +1,31 @@
+" ################################################################
+" Simple Native Modifications
+" ################################################################
+
+syntax on
+set number
+set noswapfile
+set hlsearch
+set ignorecase
+set incsearch
+
+" ################################################################
+" Plugin Selection
+" ################################################################
+"
+
+" Code additions to use vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/NERDTree'
+
+" Initialize plugin system
+call plug#end()
+
+" To install new plugs, one must run the following commands within vim.
+" :PlugInstall
+"
+" Visual Aids
+
+
+
