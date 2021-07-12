@@ -26,6 +26,14 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdtree-project-plugin'
 Plug 'PhilRunninger/nerdtree-buffer-ops'
 
+" Install PlantUML and its dependencies
+Plug 'tyru/open-browser.vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'weirongxu/plantuml-previewer.vim'
+
+" Installing Grammer tools
+Plug 'rhysd/vim-grammarous'
+
 " Initialize plugin system
 call plug#end()
 

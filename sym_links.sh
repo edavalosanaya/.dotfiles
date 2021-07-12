@@ -8,6 +8,7 @@ ln -sf $HOME/.dotfiles/.xmodmaprc $HOME/.xmodmaprc # file
 
 # vim configuration
 ln -sf $HOME/.dotfiles/.vim/ $HOME/ # directory
+export MYVIMRC=$HOME/.vim/vimrc
 
 # fonts configuration 
 ln -sf $HOME/.dotfiles/.fonts $HOME/ # directory
