@@ -1,6 +1,12 @@
 # .dotfiles
 My personal dotfiles.
 
+## Operating System 
+
+The configuration files in this repository are mostly focused on GNU/Linux OS, specifically Ubuntu. However, I added some minor configuration for windows, which can be found in `.windows` subfolder. Additionally, if you install Vim for windows, make sure to place the `plug.vim` from `junegunn/vim-plug` inside the `C:\Program Files (x86)\Vim\vim82\autoload` folder.
+
+All the following information is then only for Ubuntu and other Linux distributions.
+
 ## Requirements
 
 In the configuration files within this repository, I use the following programs and other dependecies:
