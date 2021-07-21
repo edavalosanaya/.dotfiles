@@ -9,6 +9,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set backspace=indent,eol,start
+set expandtab ts=4 sw=4 ai
 
 " ################################################################
 " Plugin Selection
@@ -43,6 +44,9 @@ Plug 'vim-test/vim-test'
 
 " Installing Conda management tools
 Plug 'cjrh/vim-conda'
+
+" Installing JSON editor tools
+Plug 'elzr/vim-json'
 
 " Initialize plugin system
 call plug#end()
