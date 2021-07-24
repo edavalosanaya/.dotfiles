@@ -259,15 +259,15 @@ bindsym $mod+Shift+0 move container to workspace $wsDashboard
 #assign [class="Gnome-terminal"] $wsTerminal
 
 ### Editors
-assign [class="Code"] $wsEditor
+#assign [class="Code"] $wsEditor
 
 ### Browsers
-assign [class="Vivaldi-stable"] $wsBrowser
-assign [class="Firefox"] $wsBrowser
+#assign [class="Vivaldi-stable"] $wsBrowser
+#assign [class="Firefox"] $wsBrowser
 
 ### Music
 #assign [class="Spotify"] $wsMusic
-for_window [class="Spotify"] move to workspace $wsMusic
+#for_window [class="Spotify"] move to workspace $wsMusic
 
 ### Message
 assign [class="Thunderbird"] $wsMessage

@@ -48,6 +48,9 @@ Plug 'cjrh/vim-conda'
 " Installing JSON editor tools
 Plug 'elzr/vim-json'
 
+" Installing debugger tools
+Plug 'puremourning/vimspector'
+
 " Initialize plugin system
 call plug#end()
 
@@ -74,3 +77,20 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
+
+" ################################################################
+" Debugger Configuration
+" ################################################################
+
+" packadd! vimspector
+"let g:vimspector_enable_mappings = 'HUMAN'
+nmap <Leader>c <Plug>VimspectorContinue
+nmap <Leader>t <Plug>VimspectorStop
+nmap <Leader>r <Plug>VimspectorRestart
+nmap <Leader>p <Plug>VimspectorPause
+nmap <Leader>b <Plug>VimspectorToggleBreakpoint
+nmap <Leader>s <Plug>VimspectorStepOver
+nmap <Leader>i <Plug>VimspectorStepInto
+nmap <Leader>o <Plug>VimspectorStepOut
+nmap <Leader><C-b> <Plug>VimspectorToggleConditionalBreakpoint
+nmap <Leader><A-b> <Plug>VimspectorAddFunctionBreakpoint
