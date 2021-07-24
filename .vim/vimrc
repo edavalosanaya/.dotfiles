@@ -84,8 +84,8 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 " packadd! vimspector
 "let g:vimspector_enable_mappings = 'HUMAN'
-nmap <Leader>c <Plug>VimspectorContinue
-nmap <Leader>t <Plug>VimspectorStop
+nmap <Leader>g <Plug>VimspectorContinue
+nmap <Leader>q <Plug>VimspectorStop 
 nmap <Leader>r <Plug>VimspectorRestart
 nmap <Leader>p <Plug>VimspectorPause
 nmap <Leader>b <Plug>VimspectorToggleBreakpoint
