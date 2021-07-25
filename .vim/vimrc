@@ -51,12 +51,22 @@ Plug 'elzr/vim-json'
 " Installing debugger tools
 Plug 'puremourning/vimspector'
 
+" Installing better Python Syntax highlighting
+Plug 'vim-python/python-syntax'
+
 " Initialize plugin system
 call plug#end()
 
 " To install new plugs, one must run the following commands within vim.
 " :PlugInstall
 "
+
+" ################################################################
+" Small Parameter Settings
+" ################################################################
+
+" Enabling python highlighting
+let g:python_highlight_all = 1
 
 " ################################################################
 " Keymappings
