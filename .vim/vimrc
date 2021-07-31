@@ -10,6 +10,7 @@ set ignorecase
 set incsearch
 set backspace=indent,eol,start
 set expandtab ts=4 sw=4 ai
+set colorcolumn=72
 
 " ################################################################
 " Plugin Selection
@@ -51,9 +52,6 @@ Plug 'elzr/vim-json'
 " Installing debugger tools
 Plug 'puremourning/vimspector'
 
-" Installing better Python Syntax highlighting
-Plug 'vim-python/python-syntax'
-
 " Initialize plugin system
 call plug#end()
 
@@ -64,9 +62,6 @@ call plug#end()
 " ################################################################
 " Small Parameter Settings
 " ################################################################
-
-" Enabling python highlighting
-let g:python_highlight_all = 1
 
 " ################################################################
 " Keymappings
