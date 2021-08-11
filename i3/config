@@ -47,8 +47,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -133,6 +133,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 
+# resize step size
+set $resize_step 5
+
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -140,16 +143,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width $resize_step px or $resize_step ppt
+        bindsym j resize grow height $resize_step px or $resize_step ppt
+        bindsym k resize shrink height $resize_step px or $resize_step ppt
+        bindsym l resize grow width $resize_step px or $resize_step ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width $resize_step px or $resize_step ppt
+        bindsym Down resize grow height $resize_step px or $resize_step ppt
+        bindsym Up resize shrink height $resize_step px or $resize_step ppt
+        bindsym Right resize grow width $resize_step px or $resize_step ppt
 
         # back to normal: Enter or Escape or $mod+r
         # bindsym Return mode "default"
