@@ -6,9 +6,10 @@ ln -sf $HOME/.dotfiles/i3 $HOME/.config/ # directory
 # Keybinding configuration
 ln -sf $HOME/.dotfiles/.xmodmaprc $HOME/.xmodmaprc # file
 
-# vim configuration
-ln -sf $HOME/.dotfiles/.vim/ $HOME/ # directory
-export MYVIMRC=$HOME/.vim/vimrc
+# nvim configuration
+#ln -sf $HOME/.dotfiles/.vim/ $HOME/ # directory
+#export MYVIMRC=$HOME/.vim/vimrc
+ln -sf $HOME/.dotfiles/nvim/ $HOME/.config/ # directory
 
 # fonts configuration 
 ln -sf $HOME/.dotfiles/.fonts $HOME/ # directory

@@ -258,6 +258,9 @@ bindsym $mod+Shift+0 move container to workspace $wsDashboard
 
 # Assigning types of applications to workspaces
 
+### Dashboard
+assign [class="superProductivity"] $wsDashboard
+
 ### Terminals
 #assign [class="Gnome-terminal"] $wsTerminal
 
@@ -269,8 +272,8 @@ bindsym $mod+Shift+0 move container to workspace $wsDashboard
 #assign [class="Firefox"] $wsBrowser
 
 ### Music
-#assign [class="Spotify"] $wsMusic
-#for_window [class="Spotify"] move to workspace $wsMusic
+assign [class="Spotify"] $wsMusic
+for_window [class="Spotify"] move to workspace $wsMusic
 
 ### Message
 assign [class="Thunderbird"] $wsMessage
@@ -313,3 +316,12 @@ bar {
 	#tray_output primary
 }
 
+
+#################################################################################
+# Gaps Modifications
+#################################################################################
+
+for_window [class="^.*"] border pixel 1
+
+gaps inner 10
+gaps outer 5
