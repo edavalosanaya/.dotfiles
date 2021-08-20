@@ -13,17 +13,9 @@ In the configuration files within this repository, I use the following programs 
 
 + i3
 + rofi
-+ arc-theme
 + lxapperance (recommended)
-+ compton
 + xdotool 
-
-### Additional Program Requirements
-
-This a list of applications that I commonly use in my workspace and have added to the initialization of i3.
-
-+ superproductivity
-+ habitica-desktop
++ polybar
 
 ## Installation 
 
