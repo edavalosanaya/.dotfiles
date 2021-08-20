@@ -12,6 +12,7 @@ set wildmenu
 set mouse-=a
 set t_Co=256
 set clipboard^=unnamedplus
+set relativenumber
 
 " Code Folding
 "set foldmethod=manual
@@ -46,7 +47,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 
 " Installing colortheme Gruvbox
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
 
 " Install NERDTree
 "Plug 'preservim/NERDTree'
@@ -60,6 +62,9 @@ Plug 'morhetz/gruvbox'
 " Navigation
 "Plug 'kyazdani42/nvim-tree.lua'
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
+
+" Commenting things out
+Plug 'tpope/vim-commentary'
 
 " Installing fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -163,8 +168,6 @@ nmap <Leader>E :VimspectorEval
 " Color Configuration
 """""""""""""""""""""""""""""""""""""""
 
-autocmd vimenter * ++nested colorscheme gruvbox
-":set background = dark
-:let g:airline_theme='gruvbox'
-let g:gruvbox_contrast_dark = 'hard'
+autocmd vimenter * ++nested colorscheme molokai
+:let g:airline_theme='molokai'
 set termguicolors

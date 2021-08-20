@@ -11,14 +11,16 @@ ln -sf $HOME/.dotfiles/.xmodmaprc $HOME/.xmodmaprc # file
 #export MYVIMRC=$HOME/.vim/vimrc
 ln -sf $HOME/.dotfiles/nvim/ $HOME/.config/ # directory
 
+# polybar configuration
+ln -sf $HOME/.dotfiles/polybar $HOME/.config/ # directory
+
 # fonts configuration 
-ln -sf $HOME/.dotfiles/.fonts $HOME/ # directory
+ln -sf $HOME/.dotfiles/fonts/.fonts $HOME/ # directory
 
-# gtk-2 configuration
-ln -sf $HOME/.dotfiles/.gtkrc-2.0 $HOME/.gtkrc-2.0 # file
-
-# gtk-3 configuration
-ln -sf $HOME/.dotfiles/settings.ini $HOME/.config/gtk-3.0/settings.ini # file
+# gtk configuration
+ln -sf $HOME/.dotfiles/gtk/.gtkrc-2.0 $HOME/.gtkrc-2.0 # file
+ln -sf $HOME/.dotfiles/gtk/gtk-3.0 $HOME/.config/ # directory
+ln -sf $HOME/.dotfiles/gtk/gtk-4.0 $HOME/.config/ # directory
 
 # invert script configuration
 if [ ! -f /usr/bin/invert-color ]; # if the link does not exist, create it
