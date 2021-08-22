@@ -13,6 +13,9 @@ set mouse-=a
 set t_Co=256
 set clipboard^=unnamedplus
 set relativenumber
+set nocompatible " required by ctrl-space
+set hidden
+set encoding=utf-8
 
 " Code Folding
 "set foldmethod=manual
@@ -41,10 +44,19 @@ set diffopt +=iwhite
 call plug#begin('~/.vim/plugged')
 
 " Installing TreeSitter
-"Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " Installing start-page plugin
 Plug 'mhinz/vim-startify'
+
+" Installing telescope
+"Plug 'nvim-telescope/telescope.nvim'
+
+" Installing project.vim pluging
+"Plug 'ahmedkhalf/project.nvim'
+
+" Installing ctrl-space
+"Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Installing colortheme Gruvbox
 "Plug 'morhetz/gruvbox'
@@ -160,9 +172,17 @@ nmap <Leader>E :VimspectorEval
 "nmap <Leader>G <C-w>j:set ma<CR>
 
 """""""""""""""""""""""""""""""""""""""
-" Variable Configuration
+" TreeSitter Configuration
 """""""""""""""""""""""""""""""""""""""
 
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = { "python", "java" },
+    highlight = {
+        enable = true,
+    }
+}
+EOF
 
 """""""""""""""""""""""""""""""""""""""
 " Color Configuration
@@ -171,3 +191,13 @@ nmap <Leader>E :VimspectorEval
 autocmd vimenter * ++nested colorscheme molokai
 :let g:airline_theme='molokai'
 set termguicolors
+
+"""""""""""""""""""""""""""""""""""""""
+" Workspace Configuration / Project Management
+"""""""""""""""""""""""""""""""""""""""
+
+" let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+
+" lua << EOF
+"     require('telescope').load_extension('project')
+" EOF

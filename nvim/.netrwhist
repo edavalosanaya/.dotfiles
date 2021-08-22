@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/eduardo/.dotfiles/nvim/lua'
+let g:netrw_dirhist_7='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainEyeTracking/docs/architecture'
+let g:netrw_dirhist_6='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainEyeTracking/docs'
+let g:netrw_dirhist_5='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainEyeTracking'
 let g:netrw_dirhist_4='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainAppAPI/docs'
 let g:netrw_dirhist_3='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainAppAPI/docs/uml'
 let g:netrw_dirhist_2='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainAppAPI/docs/uml/bettysbrain_app'
 let g:netrw_dirhist_1='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainAppAPI/docs/uml'
 let g:netrw_dirhist_0='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainAppAPI/docs'
 let g:netrw_dirhist_9='/home/eduardo/Documents/gcolor2-0.4'
-let g:netrw_dirhist_8='/home/eduardo/Documents'
-let g:netrw_dirhist_7='/home/eduardo/Documents/gcolor2-0.4'
-let g:netrw_dirhist_6='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainEyeTracking/docs/architecture'
-let g:netrw_dirhist_5='/media/eduardo/WD_MyPassport/BettysBrainProject/BettysBrainEyeTracking'
