@@ -70,6 +70,16 @@ conda install debugpy
 pip install neovim
 ```
 
+#### Python Development Environment
+
+Please note that when using Neovim, you are required to install packages into your python environment. Be aware that you might have to do this for all your virtual environments.
+
+```
+conda install debugpy # for vimspector
+pip install neovim # general neovim
+conda install pytest # for unittest
+```
+
 ## Color Scheme
 
 Currently, this setup is having a monokai color scheme - at least I try for gtk themes, nvim, and terminal configurations.

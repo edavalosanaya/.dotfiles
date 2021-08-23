@@ -17,6 +17,9 @@ set nocompatible " required by ctrl-space
 set hidden
 set encoding=utf-8
 
+" Window Configuration
+set splitbelow
+
 " Code Folding
 "set foldmethod=manual
 set foldnestmax=2
@@ -35,6 +38,10 @@ set incsearch
 set ignorecase
 set smartcase
 set diffopt +=iwhite
+
+" Vertical Line
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%79v', 100)
 
 """""""""""""""""""""""""""""""""""""""
 " Plug Configuration
@@ -63,17 +70,20 @@ Plug 'mhinz/vim-startify'
 Plug 'tomasr/molokai'
 
 " Install NERDTree
-"Plug 'preservim/NERDTree'
+Plug 'preservim/NERDTree'
 
 " Install NERDTree Additions
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'scrooloose/nerdtree-project-plugin'
-"Plug 'PhilRunninger/nerdtree-buffer-ops'
+Plug 'PhilRunninger/nerdtree-buffer-ops'
 
 " Navigation
 "Plug 'kyazdani42/nvim-tree.lua'
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
+
+" Installing a good terminal
+Plug 'nikvdp/neomux'
 
 " Commenting things out
 Plug 'tpope/vim-commentary'
@@ -140,8 +150,7 @@ nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
 " Folding
-"nnoremap <space> za
-"vnoremap <space> zf
+nmap <leader><C-n> :NERDTreeToggle<CR>
 
 " Fzf
 nnoremap <leader><leader> :GFiles<CR>
