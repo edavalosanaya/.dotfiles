@@ -225,60 +225,64 @@ client.background       	$fg-color
 
 # Define names for default s for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $wsDashboard "0: Dashboard"
-set $wsTerminal "1: Terminals "
-set $wsEditor "2: Editors "
-set $wsBrowser "3: Browsers "
-set $wsMusic "4: Music "
-set $wsMessage "5: Message "
+set $ws0 "0"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
 
 # switch to workspace
-bindsym $mod+1 workspace $wsTerminal
-bindsym $mod+2 workspace $wsEditor
-bindsym $mod+3 workspace $wsBrowser
-bindsym $mod+4 workspace $wsMusic
-bindsym $mod+5 workspace $wsMessage
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $wsDashboard
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $wsTerminal
-bindsym $mod+Shift+2 move container to workspace $wsEditor
-bindsym $mod+Shift+3 move container to workspace $wsBrowser
-bindsym $mod+Shift+4 move container to workspace $wsMusic
-bindsym $mod+Shift+5 move container to workspace $wsMessage
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $wsDashboard
+bindsym $mod+Shift+0 move container to workspace $ws0
 
 # Assigning types of applications to workspaces
 
 ### Dashboard
-assign [class="superProductivity"] $wsDashboard
+assign [class="superProductivity"] $ws0
 
 ### Terminals
-#assign [class="Gnome-terminal"] $wsTerminal
+#assign [class="Gnome-terminal"] $ws1
 
 ### Editors
-#assign [class="Code"] $wsEditor
+#assign [class="Code"] $ws2
 
 ### Browsers
-#assign [class="Vivaldi-stable"] $wsBrowser
-#assign [class="Firefox"] $wsBrowser
+#assign [class="Vivaldi-stable"] $ws3
+#assign [class="Firefox"] $ws3
 
 ### Music
-assign [class="Spotify"] $wsMusic
-for_window [class="Spotify"] move to workspace $wsMusic
+assign [class="Spotify"] $ws4
+for_window [class="Spotify"] move to workspace $ws4
 
 ### Message
-assign [class="Thunderbird"] $wsMessage
-assign [class="Prospect Mail"] $wsMessage
-assign [class="discord"] $wsMessage
+assign [class="Thunderbird"] $ws5
+assign [class="Prospect Mail"] $ws5
+assign [class="discord"] $ws5
 
 #################################################################################
 # Dashboard
@@ -286,16 +290,16 @@ assign [class="discord"] $wsMessage
 
 # Todoist initialization
 #exec --no-startup-id todoist
-#for_window [class="Todoist"] move to workspace $wsDashboard
+#for_window [class="Todoist"] move to workspace $ws0
 
 # Habitica initialization
 # exec --no-startup-id desktop-habitica
-# for_window [class="Habitica"] move to workspace $wsDashboard
+# for_window [class="Habitica"] move to workspace $ws0
 # exec compton --invert-color-include "class_g=Habitica"
 
 # Superproductivity
 # exec --no-startup-id superproductivity
-# for_window [class="superProductivity"] move to workspace $wsDashboard
+# for_window [class="superProductivity"] move to workspace $ws0
 
 #################################################################################
 # Bar Modifications

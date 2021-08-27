@@ -56,6 +56,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 " Installing start-page plugin
 Plug 'mhinz/vim-startify'
 
+" Installing pydocstring
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+
 " Installing telescope
 "Plug 'nvim-telescope/telescope.nvim'
 
@@ -83,7 +86,7 @@ Plug 'PhilRunninger/nerdtree-buffer-ops'
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
 
 " Installing a good terminal
-Plug 'nikvdp/neomux'
+" Plug 'nikvdp/neomux'
 
 " Commenting things out
 Plug 'tpope/vim-commentary'
@@ -200,6 +203,14 @@ EOF
 autocmd vimenter * ++nested colorscheme molokai
 :let g:airline_theme='molokai'
 set termguicolors
+
+"""""""""""""""""""""""""""""""""""""""
+" Coc Configuration - LSP
+"""""""""""""""""""""""""""""""""""""""
+
+"Java Language : https://github.com/neoclide/coc-java
+"Python Language : https://github.com/fannheyward/coc-pyright
+"C Language : https://github.com/clangd/coc-clangd
 
 """""""""""""""""""""""""""""""""""""""
 " Workspace Configuration / Project Management

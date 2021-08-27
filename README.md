@@ -78,6 +78,7 @@ Please note that when using Neovim, you are required to install packages into yo
 conda install debugpy # for vimspector
 pip install neovim # general neovim
 conda install pytest # for unittest
+pip install doq
 ```
 
 ## Color Scheme
