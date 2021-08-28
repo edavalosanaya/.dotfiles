@@ -212,6 +212,13 @@ set termguicolors
 "Python Language : https://github.com/fannheyward/coc-pyright
 "C Language : https://github.com/clangd/coc-clangd
 
+
+"""""""""""""""""""""""""""""""""""""""
+" Tab Management and Navigation
+"""""""""""""""""""""""""""""""""""""""
+nnoremap J :tabprevious<CR>
+nnoremap K :tabnext<CR>
+
 """""""""""""""""""""""""""""""""""""""
 " Workspace Configuration / Project Management
 """""""""""""""""""""""""""""""""""""""
