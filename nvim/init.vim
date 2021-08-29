@@ -21,7 +21,7 @@ set encoding=utf-8
 set splitbelow
 
 " Code Folding
-"set foldmethod=manual
+set foldmethod=manual
 set foldnestmax=2
 
 " Tabs and Spacing
@@ -211,6 +211,14 @@ set termguicolors
 "Java Language : https://github.com/neoclide/coc-java
 "Python Language : https://github.com/fannheyward/coc-pyright
 "C Language : https://github.com/clangd/coc-clangd
+
+
+"""""""""""""""""""""""""""""""""""""""
+" Tab Movement/Management
+"""""""""""""""""""""""""""""""""""""""
+
+nnoremap J :tabprevious<CR>
+nnoremap K :tabnext<CR>
 
 """""""""""""""""""""""""""""""""""""""
 " Workspace Configuration / Project Management
