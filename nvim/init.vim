@@ -50,9 +50,6 @@ call matchadd('ColorColumn', '\%79v', 100)
 " Code additions to use vim-plug
 call plug#begin('~/.vim/plugged')
 
-" Installing vim-pandoc
-Plug 'vim-pandoc/vim-pandoc'
-
 " Installing TreeSitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
