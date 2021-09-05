@@ -11,7 +11,7 @@ if [ "$(pidof compton)" ];
         ID=$(xdotool getactivewindow)
         CLASS=$(xprop -id "$ID"  | grep "WM_CLASS" | awk '{print $4}')
         #COND="class_g=${CLASS}"
-	COND="client=${ID}"
+    	COND="client=${ID}"
         compton --invert-color-include "$COND" &
 fi
 exit

@@ -21,7 +21,7 @@ set encoding=utf-8
 set splitbelow
 
 " Code Folding
-"set foldmethod=manual
+set foldmethod=manual
 set foldnestmax=2
 
 " Tabs and Spacing
@@ -217,8 +217,9 @@ set termguicolors
 
 
 """""""""""""""""""""""""""""""""""""""
-" Tab Management and Navigation
+" Tab Movement/Management
 """""""""""""""""""""""""""""""""""""""
+
 nnoremap J :tabprevious<CR>
 nnoremap K :tabnext<CR>
 nnoremap T :tabnew<CR>
