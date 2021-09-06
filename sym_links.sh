@@ -22,6 +22,9 @@ ln -sf $HOME/.dotfiles/gtk/.gtkrc-2.0 $HOME/.gtkrc-2.0 # file
 ln -sf $HOME/.dotfiles/gtk/gtk-3.0 $HOME/.config/ # directory
 ln -sf $HOME/.dotfiles/gtk/gtk-4.0 $HOME/.config/ # directory
 
+# joplin configuration
+ln -sf $HOME/.dotfiles/joplin/keymap.json $HOME/.config/joplin/keymap.json
+
 # invert script configuration
 if [ ! -f /usr/bin/invert-color ]; # if the link does not exist, create it
 	then
