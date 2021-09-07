@@ -285,7 +285,10 @@ for_window [class="Spotify"] move to workspace $ws4
 ### Message
 assign [class="Thunderbird"] $ws5
 assign [class="Prospect Mail"] $ws5
-assign [class="discord"] $ws5
+
+### Zoom and Discord
+assign [class="discord"] $ws6
+assign [class="zoom"] $ws6
 
 #################################################################################
 # Dashboard
