@@ -50,6 +50,12 @@ call matchadd('ColorColumn', '\%79v', 100)
 " Code additions to use vim-plug
 call plug#begin('~/.vim/plugged')
 
+" Installing autoformat
+Plug 'vim-autoformat/vim-autoformat'
+
+" Installing bracey (live-preview server) for JavaScript
+Plug 'turbio/bracey.vim'
+
 " Installing TreeSitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
@@ -231,3 +237,11 @@ nnoremap X :tabclose<CR>
 " lua << EOF
 "     require('telescope').load_extension('project')
 " EOF
+
+
+"""""""""""""""""""""""""""""""""""""""
+" Autoformatting Configuration
+"""""""""""""""""""""""""""""""""""""""
+
+let g:python3_host_prog="$HOME/anaconda3/bin/python"
+noremap <F3> :Autoformat<CR>
