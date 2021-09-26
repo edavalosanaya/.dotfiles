@@ -21,7 +21,7 @@ set encoding=utf-8
 set splitbelow
 
 " Code Folding
-set foldmethod=manual
+set foldmethod=indent
 set foldnestmax=2
 
 " Tabs and Spacing
@@ -169,6 +169,7 @@ nnoremap <leader><CR>     :Buffers<CR>
 nnoremap <leader>fl       :Lines<CR>
 nnoremap <leader>ag       :Ag! <C-R><C-W><CR>
 nnoremap <leader>m        :History<CR>
+nnoremap <leader>rg       :Rg<CR>
 
 """""""""""""""""""""""""""""""""""""""
 " Debugger Keybindings
