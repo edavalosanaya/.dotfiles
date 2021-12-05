@@ -15,7 +15,6 @@ In the configuration files within this repository, I use the following programs 
 + rofi
 + lxapperance (recommended)
 + xdotool 
-+ polybar
 + nvim >= 0.5.0
 
 ## Installation 
@@ -36,14 +35,6 @@ I relocated all of the .dotfiles that I have personally modified inside this fol
 That is assuming that you have placed the `.dotfiles` directory in your home folder. Please note that you might have to configure your symbolic links differently based on your installation of i3.
 
 ### Sub-Installation
-
-#### [Polybar](https://github.com/polybar/polybar)
-
-Look into the Polybar github page to look for directions on how to install polybar. For ubuntu 20.04, I had to build from source. After that, you will need to just add the config file path.
-
-```
-polybar --config=$HOME/.dotfiles/polybar/config
-```
 
 #### Neovim
 

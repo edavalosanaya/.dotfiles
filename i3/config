@@ -6,6 +6,19 @@
 #
 
 #################################################################################
+# Colors
+#################################################################################
+
+set $fg-color #fdfff1
+set $bg-color #272821
+set $contrast-color #3b3c35
+set $red-color #f82570
+set $green-color #a6e12d
+set $yellow-color #e4db73
+set $orange-color #fc961f
+set $purple-color #ae81ff
+
+#################################################################################
 # Initial Setup Exec
 #################################################################################
 
@@ -314,24 +327,24 @@ assign [class="zoom"] $ws7
 # Bar Modifications
 #################################################################################
 
-# bar {
-#     position top
-#     status_command i3blocks
-#     colors {
-#         # bar background color
-#         background $bg
-#         # text color used for blocks that do not have a color specified.
-#         statusline $lightgray
-#         # workspaces section            
-#         #                    border     backgr.     text
-#         focused_workspace    $lightgray $lightgray  $bg
-#         inactive_workspace   $darkgray  $darkgray   $lightgray
-#         active_workspace     $darkgray  $darkgray   $lightgray
-#         urgent_workspace     $red       $red        $bg
-#     }
-# }
+bar {
+    position top
+    status_command i3blocks
+    colors {
+        # bar background color
+        background $bg-color
+        # text color used for blocks that do not have a color specified.
+        statusline $fg-color
+        # workspaces section            
+        #                    border             backgr.         text
+        focused_workspace    $constrast-color   $fg-color       $bg-color
+        inactive_workspace   $constrast-color   $bg-color       $fg-color
+        active_workspace     $constrast-color   $bg-color       $fg-color
+        urgent_workspace     $constrast-color   $red-color      $bg-color
+    }
+}
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #################################################################################
 # Gaps Modifications
@@ -341,3 +354,9 @@ for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 5
 
+#################################################################################
+# Python Development Components
+#################################################################################
+
+# Floating Windows
+for_window [class="matplotlib"] floating enable # Matplotlib

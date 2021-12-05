@@ -12,7 +12,10 @@ ln -sf $HOME/.dotfiles/.xmodmaprc $HOME/.xmodmaprc # file
 ln -sf $HOME/.dotfiles/nvim/ $HOME/.config/ # directory
 
 # polybar configuration
-ln -sf $HOME/.dotfiles/polybar $HOME/.config/ # directory
+# ln -sf $HOME/.dotfiles/polybar $HOME/.config/ # directory
+
+# i3blocks configuration
+# ln -sf $HOME/.dotfiles/i3blocks/ $HOME/.config/ # directory
 
 # fonts configuration 
 ln -sf $HOME/.dotfiles/fonts/.fonts $HOME/ # directory
@@ -36,3 +39,8 @@ fi
 if [ ! -f /usr/bin/invert-color ]; then # if the link does not exist, create it
     sudo ln -s $HOME/.dotfiles/invert.sh /usr/bin/invert-color
 fi
+
+# Load language configurations
+for FILE in $HOME/.dotfiles/languages/*; do source "$FILE"; done;
+
+
