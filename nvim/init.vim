@@ -160,6 +160,7 @@ call plug#end()
 map <silent> <F4> :CondaChangeEnv<CR>
 
 " t keymap for testing 
+let test#python#runner = 'pyunit'
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
