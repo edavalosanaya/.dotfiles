@@ -51,6 +51,9 @@ call matchadd('ColorColumn', '\%79v', 100)
 " Code additions to use vim-plug
 call plug#begin('~/.vim/plugged')
 
+" Install QML highlighting
+Plug 'peterhoeg/vim-qml'
+
 " Installing vim-slime (requirement for ipython-jupyter)
 Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
@@ -322,6 +325,12 @@ nnoremap X :tabclose<CR>
 "     require('telescope').load_extension('project')
 " EOF
 
+"""""""""""""""""""""""""""""""""""""""
+" Docstring Generator Configuration
+"""""""""""""""""""""""""""""""""""""""
+
+let g:pydocstring_formatter = "google"
+nmap <Leader>d <Plug>(pydocstring)
 
 """""""""""""""""""""""""""""""""""""""
 " Autoformatting Configuration

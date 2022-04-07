@@ -50,6 +50,9 @@ set $mod Mod4
 # Swaping the caps and the escape keys to simplify Vim 
 exec --no-startup-id xmodmap /home/eduardo/.xmodmaprc
 
+# Allowing for automatic mounting of usb devices
+exec --no-startup-id udiskie &
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status

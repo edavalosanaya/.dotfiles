@@ -1,7 +1,10 @@
 #!/bin/bash 
 
 # i3 configuration
-ln -sf $HOME/.dotfiles/i3 $HOME/.config/ # directory
+# ln -sf $HOME/.dotfiles/i3 $HOME/.config/ # directory
+
+# awesome configuration
+ln -sf $HOME/.dotfiles/awesome/ $HOME/.config/
 
 # Keybinding configuration
 ln -sf $HOME/.dotfiles/.xmodmaprc $HOME/.xmodmaprc # file
@@ -43,4 +46,5 @@ fi
 # Load language configurations
 for FILE in $HOME/.dotfiles/languages/*; do source "$FILE"; done;
 
-
+# Start up processes
+ln -sf $HOME/.dotfiles/.xinitrc $HOME/.xinitrc
