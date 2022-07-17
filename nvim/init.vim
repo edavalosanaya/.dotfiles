@@ -33,6 +33,26 @@ set expandtab
 set shiftwidth=4
 set smarttab
 
+" https://stackoverflow.com/a/30114038/13231446
+" for html/rb files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype vue setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype js setlocal ts=2 sw=2 expandtab
+autocmd Filetype ts setlocal ts=2 sw=2 expandtab
+
+" for js/coffee/jade files, 4 spaces
+autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
+
+" https://stackoverflow.com/a/4766304/13231446
+" for command mode
+nnoremap <S-Tab> <<
+" for insert mode
+inoremap <S-Tab> <C-d>
+
 " Search
 set hlsearch
 set incsearch
@@ -163,7 +183,9 @@ call plug#end()
 map <silent> <F4> :CondaChangeEnv<CR>
 
 " t keymap for testing 
-let test#python#runner = 'pyunit'
+" let test#python#runner = 'pyunit'
+let test#python#runner = 'pytest'
+ " Runners available are 'pytest', 'nose', 'nose2', 'djangotest', 'djangonose', 'mamba', and Python's built-in unittest as 'pyunit'
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
