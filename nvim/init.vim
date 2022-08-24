@@ -304,7 +304,7 @@ imap <F10> <C-o>:IPythonCellInsertBelow<CR>
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "python", "java" },
+    ensure_installed = { "python", "java", "javascript"},
     highlight = {
         enable = true,
     }
@@ -318,6 +318,11 @@ EOF
 autocmd vimenter * ++nested colorscheme molokai
 :let g:airline_theme='molokai'
 set termguicolors
+
+"""""""""""""""""""""""""""""""""""""""
+" Syntax Highlighting Configuration
+"""""""""""""""""""""""""""""""""""""""
+let g:tigris#enabled = 1
 
 """""""""""""""""""""""""""""""""""""""
 " Coc Configuration - LSP
