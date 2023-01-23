@@ -64,6 +64,9 @@ set diffopt +=iwhite
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%79v', 100)
 
+" Autocomplete selection
+" inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
+
 """""""""""""""""""""""""""""""""""""""
 " Plug Configuration
 """""""""""""""""""""""""""""""""""""""
@@ -124,6 +127,9 @@ Plug 'PhilRunninger/nerdtree-buffer-ops'
 
 " Installing a good terminal
 " Plug 'nikvdp/neomux'
+
+" Auto-save
+Plug 'Pocco81/auto-save.nvim'
 
 " Commenting things out
 Plug 'tpope/vim-commentary'
