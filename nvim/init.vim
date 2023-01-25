@@ -28,19 +28,19 @@ set foldnestmax=2
 " Tabs and Spacing
 set autoindent
 set cindent
-set tabstop=4
 set expandtab
-set shiftwidth=4
 set smarttab
+set tabstop=4
+set shiftwidth=4
 
 " https://stackoverflow.com/a/30114038/13231446
 " for html/rb files, 2 spaces
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
-autocmd Filetype vue setlocal ts=2 sw=2 expandtab
-autocmd Filetype css setlocal ts=2 sw=2 expandtab
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-autocmd Filetype js setlocal ts=2 sw=2 expandtab
-autocmd Filetype ts setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype vue setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=2 expandtab
 
 " for js/coffee/jade files, 4 spaces
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
@@ -73,6 +73,15 @@ call matchadd('ColorColumn', '\%79v', 100)
 
 " Code additions to use vim-plug
 call plug#begin('~/.vim/plugged')
+
+" JS and TS
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " this is for auto complete, prettier and tslinting
+Plug 'jiangmiao/auto-pairs' "this will auto close ( [ {
+
+" these two plugins will add highlighting and indenting to JSX and TSX files.
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Install QML highlighting
 Plug 'peterhoeg/vim-qml'
@@ -310,7 +319,7 @@ imap <F10> <C-o>:IPythonCellInsertBelow<CR>
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "python", "java", "javascript"},
+    ensure_installed = { "python", "java", "javascript", "typescript"},
     highlight = {
         enable = true,
     }
@@ -337,6 +346,8 @@ let g:tigris#enabled = 1
 "Java Language : https://github.com/neoclide/coc-java
 "Python Language : https://github.com/fannheyward/coc-pyright
 "C Language : https://github.com/clangd/coc-clangd
+
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
 
 
 """""""""""""""""""""""""""""""""""""""
