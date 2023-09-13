@@ -11,7 +11,7 @@ set ruler
 set wildmenu
 set mouse-=a
 set t_Co=256
-set clipboard^=unnamedplus
+set clipboard+=unnamedplus
 set relativenumber
 set nocompatible " required by ctrl-space
 set hidden
@@ -32,6 +32,7 @@ set expandtab
 set smarttab
 set tabstop=4
 set shiftwidth=4
+set cino+=L0
 
 " https://stackoverflow.com/a/30114038/13231446
 " for html/rb files, 2 spaces
@@ -73,6 +74,9 @@ call matchadd('ColorColumn', '\%79v', 100)
 
 " Code additions to use vim-plug
 call plug#begin('~/.vim/plugged')
+
+" Copilot
+Plug 'github/copilot.vim'
 
 " JS and TS
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} " this is for auto complete, prettier and tslinting
